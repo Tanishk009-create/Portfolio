@@ -30,7 +30,7 @@ const Portfolio = () => {
     { name: 'Core Concepts', items: portfolioData.skills.concepts, icon: Brain }
   ];
 
-  const projectTypes = ['All', 'Robotics', 'Software', 'Game', 'Web', 'CAD'];
+  const projectTypes = ['All', 'Robotics', 'Software', 'Game', 'Web', 'CAD', 'Research'];
   const [selectedType, setSelectedType] = useState('All');
 
   const filteredProjects = selectedType === 'All' 
