@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Database, Wrench, Brain, Trophy, Calendar, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Database, Wrench, Brain, Trophy, Calendar, ChevronDown, BookOpen, Camera, Eye, EyeOff } from 'lucide-react';
 import { portfolioData } from './mock';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
