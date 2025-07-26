@@ -29,7 +29,7 @@ export const portfolioData = {
       institution: "Kendriya Vidyalaya, Lalitpur (CBSE)",
       degree: "Secondary School (X)",
       duration: "2022",
-      grade: "Percentage: 97.0%"
+      grade: "Percentage: 97.0% (Social Science: 100, Maths: 99, Science: 95)"
     }
   ],
 
