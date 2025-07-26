@@ -285,6 +285,98 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Creative Works & Photography Section */}
+      <section id="creative" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 text-blue-400">Creative Works & Photography</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Creative Writing */}
+            <div>
+              <div className="flex items-center space-x-3 mb-8">
+                <BookOpen className="w-6 h-6 text-blue-400" />
+                <h3 className="text-2xl font-semibold text-white">Creative Writing</h3>
+              </div>
+              
+              <div className="space-y-6">
+                {portfolioData.creativeWorks.map((work) => (
+                  <Card key={work.id} className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-colors">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400">
+                          {work.type}
+                        </Badge>
+                        <span className="text-sm text-gray-400">{work.date}</span>
+                      </div>
+                      <h4 className="text-xl font-semibold text-white mb-4">{work.title}</h4>
+                      
+                      <div className="text-gray-300 leading-relaxed">
+                        <pre className="whitespace-pre-wrap font-sans">
+                          {expandedPoem === work.id ? work.fullContent : work.preview}
+                        </pre>
+                      </div>
+                      
+                      <Button
+                        onClick={() => setExpandedPoem(expandedPoem === work.id ? null : work.id)}
+                        variant="ghost"
+                        className="mt-4 text-blue-400 hover:text-blue-300 p-0"
+                      >
+                        {expandedPoem === work.id ? (
+                          <>
+                            <EyeOff className="w-4 h-4 mr-2" />
+                            Show Less
+                          </>
+                        ) : (
+                          <>
+                            <Eye className="w-4 h-4 mr-2" />
+                            Read Full Poem
+                          </>
+                        )}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Photography */}
+            <div>
+              <div className="flex items-center space-x-3 mb-8">
+                <Camera className="w-6 h-6 text-blue-400" />
+                <h3 className="text-2xl font-semibold text-white">Photography</h3>
+              </div>
+              
+              {portfolioData.photography.length === 0 ? (
+                <Card className="bg-gray-800 border-gray-700">
+                  <CardContent className="p-8 text-center">
+                    <Camera className="w-12 h-12 text-gray-500 mx-auto mb-4" />
+                    <p className="text-gray-400">Photography works coming soon...</p>
+                  </CardContent>
+                </Card>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {portfolioData.photography.map((photo, index) => (
+                    <Card key={index} className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-colors overflow-hidden">
+                      <div className="aspect-square overflow-hidden">
+                        <img 
+                          src={photo.image} 
+                          alt={photo.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <CardContent className="p-4">
+                        <h4 className="text-lg font-semibold text-white mb-2">{photo.title}</h4>
+                        <p className="text-gray-400 text-sm">{photo.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-6">
