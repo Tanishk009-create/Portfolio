@@ -240,6 +240,17 @@ const Portfolio = () => {
                       </Badge>
                     ))}
                   </div>
+                  {project.link && (
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Visit Website</span>
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}
