@@ -47,7 +47,7 @@ export const portfolioData = {
       title: "Object Avoiding Robot",
       date: "2024",
       description: "Built an autonomous robot that can navigate and avoid obstacles using sensors and intelligent algorithms.",
-      image: "https://customer-assets.emergentagent.com/job_028c247b-bf62-4c66-9276-42cef03db150/artifacts/i1tdnmck_image.png",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/06mqxu00_image.png",
       technologies: ["Arduino", "C++", "Sensors"],
       type: "Robotics"
     },
