@@ -9,7 +9,7 @@ export const portfolioData = {
     github: "https://github.com/tiwaritanishk",
     linkedin: "https://linkedin.com/in/tanishk-tiwari",
     website: "https://vedic-math-project.com",
-    summary: "First-year B.Tech student at Cluster Innovation Centre, University of Delhi, specializing in Information Technology and Mathematical Innovations. Passionate about research, robotics, software development, and applied mathematics."
+    summary: "B.Tech student at Cluster Innovation Centre, University of Delhi, specializing in Information Technology and Mathematical Innovations. Passionate about research, robotics, software development, and applied mathematics."
   },
   
   education: [
@@ -201,5 +201,36 @@ Forever.`
     }
   ],
 
-  photography: []
+  photography: [
+    {
+      id: 1,
+      title: "Reflections in Crimson",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1ivscsbo_WhatsApp%20Image%202025-07-27%20at%2000.23.33.jpeg",
+      description: "A mesmerizing play of light and shadow where human silhouette meets the poetry of water reflections under the night sky."
+    },
+    {
+      id: 2,
+      title: "Bonds Beyond Barriers", 
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/iapo6h57_WhatsApp%20Image%202025-07-27%20at%2000.23.32.jpeg",
+      description: "Through the chains that bind, beauty blooms eternal - a metaphor for finding hope in the most constrained circumstances."
+    },
+    {
+      id: 3,
+      title: "Dreams of Paris",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/unz20c1f_WhatsApp%20Image%202025-07-27%20at%2000.23.31.jpeg", 
+      description: "When wanderlust meets reality - capturing the essence of Parisian dreams through architectural elegance and cloudy aspirations."
+    },
+    {
+      id: 4,
+      title: "Nature's Vibrant Heart",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/xirg72fz_WhatsApp%20Image%202025-07-27%20at%2000.23.31%20%281%29.jpeg",
+      description: "The delicate dance of magenta petals kissed by golden sunlight - a testament to nature's artistic perfection."
+    },
+    {
+      id: 5,
+      title: "Heritage Illuminated",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1yv7o9pi_WhatsApp%20Image%202025-07-27%20at%2000.24.17.jpeg",
+      description: "The majestic Qutub Minar standing tall against the darkness, its ancient stones telling stories of centuries past through modern illumination."
+    }
+  ]
 };
