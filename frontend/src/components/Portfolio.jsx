@@ -54,9 +54,9 @@ const Portfolio = () => {
       <nav className="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold text-blue-400">TANISHK.DEV</div>
+            <div className="text-xl font-bold text-blue-400">Portfolio</div>
             <div className="hidden md:flex space-x-8">
-              {['hero', 'about', 'education', 'skills', 'projects', 'achievements', 'contact'].map((section) => (
+              {['hero', 'about', 'education', 'skills', 'projects', 'achievements', 'creative', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -64,7 +64,7 @@ const Portfolio = () => {
                     activeSection === section ? 'text-blue-400' : 'text-gray-300'
                   }`}
                 >
-                  {section}
+                  {section === 'creative' ? 'Creative Works' : section}
                 </button>
               ))}
             </div>
