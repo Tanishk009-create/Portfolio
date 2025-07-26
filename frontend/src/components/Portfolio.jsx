@@ -84,7 +84,7 @@ const Portfolio = () => {
             </h2>
             <div className="flex items-center justify-center space-x-4 text-gray-400 mb-8">
               <MapPin className="w-5 h-5" />
-              <span>{portfolioData.profile.location}</span>
+              <span>Delhi, India</span>
             </div>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
               {portfolioData.profile.summary}
