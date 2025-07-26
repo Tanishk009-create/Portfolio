@@ -419,12 +419,6 @@ const Portfolio = () => {
                         <span>LinkedIn Profile</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
-                      <a href={portfolioData.profile.website} target="_blank" rel="noopener noreferrer"
-                         className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                        <span>Vedic Math Project</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
                     </div>
                   </div>
                 </div>
