@@ -134,19 +134,19 @@ export const portfolioData = {
 
   achievements: [
     {
-      title: "Convoke Techfest - Cluster Innovation Centre",
-      description: "Secured 2nd place in Line Follower Robot (LFR) path traversal challenge",
-      date: "Oct 2024"
-    },
-    {
       title: "Techfest – IIT Bombay | LNMIIIT Jaipur", 
       description: "Participated in 'Meshmerize' and successfully built a Line Following Robot",
       date: "Apr 2025"
     },
     {
-      title: "Ganga Quest 2021 - National Level Winner",
-      description: "Secured national level recognition in Ganga Quest environmental awareness competition",
-      date: "2021"
+      title: "Convoke Techfest - Cluster Innovation Centre",
+      description: "Secured 2nd place in Line Follower Robot (LFR) path traversal challenge",
+      date: "Oct 2024"
+    },
+    {
+      title: "Rajya Puraskar - Bharat Scouts & Guides",
+      description: "Highest state-level scouting award certified Scout",
+      date: "2023"
     },
     {
       title: "PCRA Essay Writing Competition - State Level Winner",
@@ -154,9 +154,14 @@ export const portfolioData = {
       date: "2023"
     },
     {
-      title: "Rajya Puraskar - Bharat Scouts & Guides",
-      description: "Highest state-level scouting award certified Scout",
-      date: "2023"
+      title: "Ganga Quest 2021 - National Level Winner",
+      description: "Secured national level recognition in Ganga Quest environmental awareness competition",
+      date: "2021"
+    },
+    {
+      title: "Sanskrit Olympiad 2019 - Top 50 National Level Winner",
+      description: "Among top 50 national level winners of Sanskrit Olympiad, demonstrating excellence in classical language proficiency",
+      date: "2019"
     }
   ],
 
