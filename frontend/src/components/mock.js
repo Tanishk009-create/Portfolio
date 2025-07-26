@@ -73,6 +73,7 @@ export const portfolioData = {
       title: "Vedic Mathematics Educational Game",
       date: "Dec 2024 – Jun 2025",
       description: "Led the development of an interactive educational game using Python to teach Vedic Mathematics concepts.",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/4i01pihx_Screenshot%202025-07-27%20000600.png",
       technologies: ["Python", "Game Development"],
       type: "Game"
     },
@@ -81,6 +82,7 @@ export const portfolioData = {
       title: "Red Ball Game",
       date: "2024",
       description: "Created an engaging Red Ball game using Python and Linear Algebra concepts for physics simulation.",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/xl8r9551_Screenshot%202025-07-27%20000941.png",
       technologies: ["Python", "Linear Algebra", "Physics"],
       type: "Game"
     },
@@ -89,6 +91,7 @@ export const portfolioData = {
       title: "Java Quiz Game",
       date: "2024",
       description: "Built an interactive quiz-based game in Java using Java Swing to teach core programming concepts.",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/iht3b6cn_Screenshot%202025-07-27%20001406.png",
       technologies: ["Java", "Swing", "GUI"],
       type: "Game"
     },
@@ -96,15 +99,17 @@ export const portfolioData = {
       id: 7,
       title: "Vedic Mathematics Website",
       date: "Dec 2024",
-      description: "Created a complete educational website to promote Vedic Maths concepts among school students.",
-      technologies: ["Google Sites", "Web Design"],
-      type: "Web"
+      description: "Created a complete educational website to promote Vedic Maths concepts among school students. Every content on the website is created by me, including articles, examples, and interactive elements.",
+      technologies: ["Google Sites", "Web Design", "Content Creation"],
+      type: "Web",
+      link: "https://vedic-math-project.com"
     },
     {
       id: 8,
       title: "CAD Stress Analysis & Optimization",
       date: "Jun 2025",
       description: "Designed complex 3D figures using Fusion 360; simulated and analyzed stress using FreeCAD for 3D printing optimization.",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/afua3htu_Screenshot%202024-12-30%20030852.png",
       technologies: ["Fusion 360", "FreeCAD", "3D Printing"],
       type: "CAD"
     },
