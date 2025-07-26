@@ -9,6 +9,7 @@ import { Separator } from './ui/separator';
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isLoaded, setIsLoaded] = useState(false);
+  const [expandedPoem, setExpandedPoem] = useState(null);
 
   useEffect(() => {
     setIsLoaded(true);
