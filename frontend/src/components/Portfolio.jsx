@@ -82,9 +82,41 @@ const Portfolio = () => {
   const projectTypes = ['All', 'Robotics', 'Software', 'Game', 'Web', 'CAD', 'Research'];
   const [selectedType, setSelectedType] = useState('All');
 
-  const filteredProjects = selectedType === 'All' 
-    ? portfolioData.projects 
-    : portfolioData.projects.filter(project => project.type === selectedType);
+  const handleProjectFilter = async (type) => {
+    setSelectedType(type);
+    try {
+      const filteredProjects = await ApiService.getProjects(type);
+      setPortfolioData(prev => ({ ...prev, projects: filteredProjects }));
+    } catch (err) {
+      console.error('Error filtering projects:', err);
+    }
+  };
+
+  const filteredProjects = portfolioData.projects;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+          <p className="text-gray-300">Loading portfolio...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-400 mb-4">{error}</p>
+          <Button onClick={loadPortfolioData} className="bg-blue-600 hover:bg-blue-700">
+            Retry
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
