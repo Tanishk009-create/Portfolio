@@ -38,7 +38,7 @@ export const portfolioData = {
     webDev: ["HTML", "CSS"],
     tools: ["GitHub", "VS Code", "Mathematica", "MATLAB", "Canva", "Figma"],
     cad: ["Fusion 360", "FreeCAD"],
-    concepts: ["OOP", "Data Structures", "Graph Theory", "Linear Algebra"]
+    concepts: ["OOP", "Data Structures", "Graph Theory", "Linear Algebra", "Calculus", "Engineering Physics"]
   },
 
   projects: [
