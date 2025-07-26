@@ -107,6 +107,14 @@ export const portfolioData = {
       description: "Designed complex 3D figures using Fusion 360; simulated and analyzed stress using FreeCAD for 3D printing optimization.",
       technologies: ["Fusion 360", "FreeCAD", "3D Printing"],
       type: "CAD"
+    },
+    {
+      id: 9,
+      title: "Research Paper: Solar Energy and Electric Vehicles",
+      date: "Currently Working",
+      description: "Conducting comprehensive research on the integration of solar energy systems with electric vehicle technology for sustainable transportation solutions.",
+      technologies: ["Research", "Solar Energy", "Electric Vehicles", "Sustainability"],
+      type: "Research"
     }
   ],
 
