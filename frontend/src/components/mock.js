@@ -135,14 +135,71 @@ export const portfolioData = {
       date: "Apr 2025"
     },
     {
-      title: "Rajya Puraskar - Bharat Scouts & Guides",
-      description: "Highest state-level scouting award certified Scout",
+      title: "Ganga Quest 2021 - National Level Winner",
+      description: "Secured national level recognition in Ganga Quest environmental awareness competition",
+      date: "2021"
+    },
+    {
+      title: "PCRA Essay Writing Competition - State Level Winner",
+      description: "Won state level essay writing competition organized by Petroleum Conservation Research Association",
       date: "2023"
     },
     {
-      title: "Team Leadership",
-      description: "Team Leader for multiple academic and technical projects",
-      date: "Ongoing"
+      title: "Rajya Puraskar - Bharat Scouts & Guides",
+      description: "Highest state-level scouting award certified Scout",
+      date: "2023"
     }
-  ]
+  ],
+
+  creativeWorks: [
+    {
+      id: 1,
+      title: "How content I was",
+      type: "Poetry",
+      date: "2024",
+      preview: "How content I was \nWith my head on your lap.\nYour hand through my hairs,\nGiving me tingling sensation \nThroughout...",
+      fullContent: `How content I was 
+With my head on your lap.
+Your hand through my hairs,
+Giving me tingling sensation 
+Throughout.
+
+How happy I was
+When you smiled at me, 
+Disarmed me,
+Made me feel fluffier, cozier 
+Than any book can do.
+
+How free I was
+When your fingers held mine.
+Hands bounded together.
+Like snakes coiling,
+Sucking my gloom out.
+
+How vulnerable I was
+When your head fell on my shoulder. 
+Breathless, unable to move
+As if my world depended on it.
+And it did.
+
+It did... It still does
+But you are no longer here 
+For the times have changed 
+And I am left wondering 
+
+How suffocated I was
+With joy when 
+My heart wasn't mine anymore 
+Or with ache when
+It wasn't there anymore.
+
+For I felt so lonely
+When we parted ways.
+The corners turned, 
+And our lives changed.
+Forever.`
+    }
+  ],
+
+  photography: []
 };
