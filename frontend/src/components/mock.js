@@ -134,7 +134,7 @@ export const portfolioData = {
 
   achievements: [
     {
-      title: "Techfest – IIT Bombay | LNMIIIT Jaipur", 
+      title: "Techfest – IIT Bombay | LNMIIT Jaipur", 
       description: "Participated in 'Meshmerize' and successfully built a Line Following Robot",
       date: "Apr 2025"
     },
