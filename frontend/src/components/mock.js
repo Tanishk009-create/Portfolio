@@ -3,7 +3,7 @@ export const portfolioData = {
   profile: {
     name: "TANISHK TIWARI",
     title: "B.Tech Student | Future Tech Innovator",
-    location: "Lalitpur, Uttar Pradesh, India",
+    location: "Delhi, India",
     phone: "+91 9119937716",
     email: "tiwaritanishk555ltp@gmail.com",
     github: "https://github.com/tiwaritanishk",
