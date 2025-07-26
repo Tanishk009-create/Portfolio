@@ -219,7 +219,7 @@ Forever.`
     {
       id: 1,
       title: "Reflections in Crimson",
-      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1ivscsbo_WhatsApp%20Image%202025-07-27%20at%2000.23.33.jpeg",
+      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1yv7o9pi_WhatsApp%20Image%202025-07-27%20at%2000.24.17.jpeg","https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1ivscsbo_WhatsApp%20Image%202025-07-27%20at%2000.23.33.jpeg",
       description: "A mesmerizing play of light and shadow where human silhouette meets the poetry of water reflections under the night sky."
     },
     {
@@ -243,7 +243,7 @@ Forever.`
     {
       id: 5,
       title: "Heritage Illuminated",
-      image: "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1yv7o9pi_WhatsApp%20Image%202025-07-27%20at%2000.24.17.jpeg",
+      image: 
       description: "The majestic Qutub Minar standing tall against the darkness, its ancient stones telling stories of centuries past through modern illumination."
     }
   ]

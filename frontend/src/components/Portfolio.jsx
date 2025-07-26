@@ -280,7 +280,7 @@ const Portfolio = () => {
               {projectTypes.map((type) => (
                 <Button
                   key={type}
-                  onClick={() => setSelectedType(type)}
+                  onClick={() => handleProjectFilter(type)}
                   variant={selectedType === type ? "default" : "outline"}
                   className={selectedType === type 
                     ? "bg-blue-600 hover:bg-blue-700" 
