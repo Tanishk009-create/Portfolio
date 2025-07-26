@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Database, Wrench, Brain, Trophy, Calendar, ChevronDown, BookOpen, Camera, Eye, EyeOff } from 'lucide-react';
-import { portfolioData } from './mock';
+import ApiService from '../services/apiService';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -10,10 +10,58 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isLoaded, setIsLoaded] = useState(false);
   const [expandedPoem, setExpandedPoem] = useState(null);
+  
+  // State for API data
+  const [portfolioData, setPortfolioData] = useState({
+    profile: {},
+    education: [],
+    skills: {},
+    projects: [],
+    achievements: [],
+    creativeWorks: [],
+    photography: []
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setIsLoaded(true);
+    loadPortfolioData();
   }, []);
+
+  const loadPortfolioData = async () => {
+    try {
+      setLoading(true);
+      
+      // Fetch all portfolio data
+      const [profile, education, skills, projects, achievements, creativeWorks, photography] = await Promise.all([
+        ApiService.getProfile(),
+        ApiService.getEducation(),
+        ApiService.getSkills(),
+        ApiService.getProjects(),
+        ApiService.getAchievements(),
+        ApiService.getCreativeWorks(),
+        ApiService.getPhotography()
+      ]);
+
+      setPortfolioData({
+        profile,
+        education,
+        skills,
+        projects,
+        achievements,
+        creativeWorks,
+        photography
+      });
+      
+      setError(null);
+    } catch (err) {
+      console.error('Error loading portfolio data:', err);
+      setError('Failed to load portfolio data. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
