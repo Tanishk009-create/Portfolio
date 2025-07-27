@@ -6,7 +6,7 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Any, Union
 import uuid
 from datetime import datetime
 
@@ -82,11 +82,6 @@ class Photography(BaseModel):
     description: str
     order: int = 0
 
-class ApiResponse(BaseModel):
-    success: bool
-    data: Optional[dict] = None
-    message: Optional[str] = None
-
 # API Endpoints
 
 # Profile endpoints
@@ -99,10 +94,10 @@ async def get_profile():
         
         # Remove MongoDB _id from response
         profile.pop('_id', None)
-        return ApiResponse(success=True, data=profile)
+        return {"success": True, "data": profile}
     except Exception as e:
         logging.error(f"Error fetching profile: {e}")
-        return ApiResponse(success=False, message="Failed to fetch profile")
+        return {"success": False, "message": "Failed to fetch profile"}
 
 @api_router.put("/profile")
 async def update_profile(profile: Profile):
@@ -111,10 +106,10 @@ async def update_profile(profile: Profile):
         profile_dict['updatedAt'] = datetime.utcnow()
         
         result = await db.profile.replace_one({}, profile_dict, upsert=True)
-        return ApiResponse(success=True, message="Profile updated successfully")
+        return {"success": True, "message": "Profile updated successfully"}
     except Exception as e:
         logging.error(f"Error updating profile: {e}")
-        return ApiResponse(success=False, message="Failed to update profile")
+        return {"success": False, "message": "Failed to update profile"}
 
 # Education endpoints
 @api_router.get("/education")
@@ -123,10 +118,10 @@ async def get_education():
         education_list = await db.education.find().sort("order", 1).to_list(100)
         for edu in education_list:
             edu.pop('_id', None)
-        return ApiResponse(success=True, data=education_list)
+        return {"success": True, "data": education_list}
     except Exception as e:
         logging.error(f"Error fetching education: {e}")
-        return ApiResponse(success=False, message="Failed to fetch education")
+        return {"success": False, "message": "Failed to fetch education"}
 
 # Skills endpoints
 @api_router.get("/skills")
@@ -136,10 +131,10 @@ async def get_skills():
         skills_dict = {}
         for skill in skills_list:
             skills_dict[skill['category']] = skill['items']
-        return ApiResponse(success=True, data=skills_dict)
+        return {"success": True, "data": skills_dict}
     except Exception as e:
         logging.error(f"Error fetching skills: {e}")
-        return ApiResponse(success=False, message="Failed to fetch skills")
+        return {"success": False, "message": "Failed to fetch skills"}
 
 # Projects endpoints
 @api_router.get("/projects")
@@ -152,10 +147,10 @@ async def get_projects(project_type: Optional[str] = None):
         projects = await db.projects.find(query).sort("order", 1).to_list(100)
         for project in projects:
             project.pop('_id', None)
-        return ApiResponse(success=True, data=projects)
+        return {"success": True, "data": projects}
     except Exception as e:
         logging.error(f"Error fetching projects: {e}")
-        return ApiResponse(success=False, message="Failed to fetch projects")
+        return {"success": False, "message": "Failed to fetch projects"}
 
 # Achievements endpoints
 @api_router.get("/achievements")
@@ -164,10 +159,10 @@ async def get_achievements():
         achievements = await db.achievements.find().sort("order", 1).to_list(100)
         for achievement in achievements:
             achievement.pop('_id', None)
-        return ApiResponse(success=True, data=achievements)
+        return {"success": True, "data": achievements}
     except Exception as e:
         logging.error(f"Error fetching achievements: {e}")
-        return ApiResponse(success=False, message="Failed to fetch achievements")
+        return {"success": False, "message": "Failed to fetch achievements"}
 
 # Creative works endpoints
 @api_router.get("/creative-works")
@@ -176,10 +171,10 @@ async def get_creative_works():
         creative_works = await db.creative_works.find().to_list(100)
         for work in creative_works:
             work.pop('_id', None)
-        return ApiResponse(success=True, data=creative_works)
+        return {"success": True, "data": creative_works}
     except Exception as e:
         logging.error(f"Error fetching creative works: {e}")
-        return ApiResponse(success=False, message="Failed to fetch creative works")
+        return {"success": False, "message": "Failed to fetch creative works"}
 
 # Photography endpoints
 @api_router.get("/photography")
@@ -188,20 +183,20 @@ async def get_photography():
         photos = await db.photography.find().sort("order", 1).to_list(100)
         for photo in photos:
             photo.pop('_id', None)
-        return ApiResponse(success=True, data=photos)
+        return {"success": True, "data": photos}
     except Exception as e:
         logging.error(f"Error fetching photography: {e}")
-        return ApiResponse(success=False, message="Failed to fetch photography")
+        return {"success": False, "message": "Failed to fetch photography"}
 
 # Data seeding endpoint (for initial setup)
 @api_router.post("/seed-data")
 async def seed_data():
     try:
         # This endpoint will be used to populate initial data from mock.js
-        return ApiResponse(success=True, message="Data seeding endpoint ready")
+        return {"success": True, "message": "Data seeding endpoint ready"}
     except Exception as e:
         logging.error(f"Error seeding data: {e}")
-        return ApiResponse(success=False, message="Failed to seed data")
+        return {"success": False, "message": "Failed to seed data"}
 
 # Include the router in the main app
 app.include_router(api_router)
