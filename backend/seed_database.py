@@ -255,13 +255,13 @@ Forever."""
         {
             "id": "1",
             "title": "Reflections in Crimson",
-            "image": "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1ivscsbo_WhatsApp%20Image%202025-07-27%20at%2000.23.33.jpeg",
-            "description": "A mesmerizing play of light and shadow where human silhouette meets the poetry of water reflections under the night sky.",
+            "image": "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1yv7o9pi_WhatsApp%20Image%202025-07-27%20at%2000.24.17.jpeg",
+            "description": "The warm crimson glow of burning wood creates a mesmerizing dance of flames and embers, capturing the raw beauty of fire in its natural element.",
             "order": 1
         },
         {
             "id": "2",
-            "title": "Bonds Beyond Barriers",
+            "title": "Bonds Beyond Barriers", 
             "image": "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/iapo6h57_WhatsApp%20Image%202025-07-27%20at%2000.23.32.jpeg",
             "description": "Through the chains that bind, beauty blooms eternal - a metaphor for finding hope in the most constrained circumstances.",
             "order": 2
@@ -283,8 +283,8 @@ Forever."""
         {
             "id": "5",
             "title": "Heritage Illuminated",
-            "image": "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1yv7o9pi_WhatsApp%20Image%202025-07-27%20at%2000.24.17.jpeg",
-            "description": "The majestic Qutub Minar standing tall against the darkness, its ancient stones telling stories of centuries past through modern illumination.",
+            "image": "https://customer-assets.emergentagent.com/job_it-math-innovator/artifacts/1ivscsbo_WhatsApp%20Image%202025-07-27%20at%2000.23.33.jpeg",
+            "description": "A mesmerizing play of light and shadow where human silhouette meets the poetry of water reflections under the night sky.",
             "order": 5
         }
     ]
